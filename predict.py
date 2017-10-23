@@ -10,6 +10,7 @@ for i in file.readlines():
     result = i.strip().split(',')
     if len(result) != 20:
         result = result[:20]
+    result = [float(i) for i in result]
     result = str(np.argmax(result))+','
     output.write(result)
     
